@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"[http://www.hallowelt.com Hallo Welt! GmbH]"
+		]
+	},
+	"wikirag-desc": "Description of WikiRAG for [[Special:Version]]",
+	"wikirag-prompt-analyzer": "Additional prompts used when analyzing a document during indexing {{notranslate}}",
+	"wikirag-ve-magic-label": "Label for the magic word switch",
+	"wikirag-ve-magic-help": "Help text for the magic word switch",
+	"wikirag-ve-magic-yes": "Label to index this page",
+	"wikirag-ve-magic-no": "Label to not index this page",
+	"wikirag-servicemode-full-reindex": "Button label",
+	"wikirag-servicemode-schedule-reindex": "Button label",
+	"wikirag-pageinfo-title": "Page information dialog title",
+	"wikirag-pageinfo-export-status-exported": "Status label indicating the page has been exported",
+	"wikirag-pageinfo-export-status-disabled": "Status label indicating the page is not exportable",
+	"wikirag-pageinfo-export-status-not-exported": "Status label indicating the page has not been exported",
+	"wikirag-pageinfo-export-status-label": "Field label for export status"
+}

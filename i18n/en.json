@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [ "[http://www.hallowelt.com Hallo Welt! GmbH]" ]
+	},
+	"wikirag-desc": "Augmentation layer for wiki-powered LLMs",
+	"wikirag-prompt-analyzer": "",
+	"wikirag-ve-magic-label": "Can be indexed for ChatBot",
+	"wikirag-ve-magic-help": "Is this page allowed to be used as source for ChatBot",
+	"wikirag-ve-magic-yes": "Yes, allow indexing",
+	"wikirag-ve-magic-no": "No, do not index",
+	"wikirag-servicemode-full-reindex": "Execute full reindex (immediate)",
+	"wikirag-servicemode-schedule-reindex": "Schedule full reindex",
+	"wikirag-pageinfo-title": "ChatBot indexing status",
+	"wikirag-pageinfo-export-status-exported": "Exported",
+	"wikirag-pageinfo-export-status-disabled": "Not eligible for export",
+	"wikirag-pageinfo-export-status-not-exported": "Not yet exported",
+	"wikirag-pageinfo-export-status-label": "Export status"
+}

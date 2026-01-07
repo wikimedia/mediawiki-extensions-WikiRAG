@@ -1,0 +1,85 @@
+{{DISPLAYTITLE:Sample Page}}
+__TOC__
+
+{{Infobox
+| name = Example Page
+| type = Demo
+| author = [[User:JohnDoe]]
+| created = 2025-01-01
+}}
+
+<dummyTag foo="Bar">Brown fox jumps over the lazy dog.</dummyTag> Other content
+
+<dummy:Tag foo="Bar">Brown fox jumps over the lazy dog.</dummy:Tag>
+
+==Introduction==
+This is a '''sample''' page to demonstrate ''WikiText'' syntax for LLM testing.
+It includes various elements like lists, links, templates, tables, and HTML.
+
+===Features===
+* Bold text: '''Important'''
+* Italic text: ''Emphasis''
+* Bold+Italic text: '''''Very important'''''
+* Internal link: [[Main Page|Home]]
+* External link: [https://example.com Example website]
+* Numbered list:
+# Step one
+# Step two
+## Substep 2a
+# Step three
+
+==Template Examples==
+{{Messagebox|boxtype=info|Note text=This is an informational message.}}
+{{#if: condition | Then text | Else text }}
+{{Citation needed|date=2025-10-23}}
+
+==Table Example==
+{| class="wikitable" style="width:100%;"
+|+ Caption text
+! Name !! Value !! Description
+|-
+| Alpha || 10 || First entry
+|-
+| Beta || 20 || Second entry
+|-
+| Gamma || 30 || Third entry with <span style="color:red;">HTML formatting</span>
+|}
+
+==Templates==
+===Nested Templates===
+{{Infobox person
+| name = John Doe
+| occupation = Scientist
+| awards = {{Award|Nobel Prize in Physics}}
+| more_awards = {{Award|type=National Medal of Science}}
+}}
+
+==Advanced Syntax==
+* Nowiki example: <nowiki>{{This should not be parsed}}</nowiki>
+* Preformatted: <pre>
+function test() {
+    console.log("Hello World");
+}
+</pre>
+* Comment:<!-- This is a hidden comment -->
+* Magic word: {{PAGENAME}} displays current page name
+
+==Links and Categories==
+[[Category:Demo]]
+[[Category:WikiText Examples]]
+[[File:Example.png|thumb|200px|Example image]]
+
+==Conclusion==
+This page mixes:
+* Headings
+* Lists
+* Bold/Italic
+* Templates
+* Tables
+* HTML
+* Magic words
+* Comments
+* Links
+* Categories
+
+It is intentionally complex to show what LLMs may struggle with.

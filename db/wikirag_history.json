@@ -1,0 +1,54 @@
+[
+	{
+		"name": "wikirag_history",
+		"columns": [
+			{
+				"name": "wrh_namespace",
+				"type": "integer",
+				"options": {
+					"notnull": true
+				}
+			},
+			{
+				"name": "wrh_title",
+				"type": "binary",
+				"options": {
+					"notnull": true,
+					"length": 255
+				}
+			},
+			{
+				"name": "wrh_pipeline",
+				"type": "binary",
+				"options": {
+					"notnull": true,
+					"length": 255
+				}
+			},
+			{
+				"name": "wrh_status",
+				"type": "binary",
+				"options": {
+					"notnull": true,
+					"length": 20
+				}
+			},
+			{
+				"name": "wrh_error_message",
+				"type": "text",
+				"options": {
+					"notnull": false
+				}
+			},
+			{
+				"name": "wrh_timestamp",
+				"type": "mwtimestamp",
+				"options": {
+					"notnull": true
+				}
+			}
+		],
+		"indexes": [],
+		"pk": [ "wrh_namespace", "wrh_title", "wrh_pipeline" ]
+	}
+]

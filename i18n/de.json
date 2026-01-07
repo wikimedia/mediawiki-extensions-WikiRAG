@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"[http://www.hallowelt.com Hallo Welt! GmbH]"
+		]
+	},
+	"wikirag-desc": "Erweiterungsschicht für wiki-gestützte LLMs"
+}
