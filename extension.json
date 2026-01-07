@@ -1,0 +1,219 @@
+{
+	"name": "WikiRAG",
+	"version": "1.0.0-alpha",
+	"license-name": "GPL-3.0-only",
+	"author": [
+		"[https://www.hallowelt.com Hallo Welt! GmbH]"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:WikiRAG",
+	"descriptionmsg": "wikirag-desc",
+	"requires": {
+		"MediaWiki": ">= 1.43.0"
+	},
+	"MessagesDirs": {
+		"WikiRAG": "i18n"
+	},
+	"ExtensionMessagesFiles": {
+		"WikiRAGMagic": "WikiRAG.i18n.magic.php"
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\WikiRAG\\": "src/"
+	},
+	"TestAutoloadNamespaces": {
+		"MediaWiki\\Extension\\WikiRAG\\Tests\\Unit\\": "tests/phpunit/unit/",
+		"MediaWiki\\Extension\\WikiRAG\\Tests\\Integration\\": "tests/phpunit/integration/"
+	},
+	"attributes": {
+		"BlueSpiceVisualEditorConnector": {
+			"PluginModules": [
+				"ext.wikirag.visualEditorPlugin"
+			]
+		},
+		"WikiRAG": {
+			"Targets": {
+				"local-directory": {
+					"class": "MediaWiki\\Extension\\WikiRAG\\Target\\LocalDirectory"
+				},
+				"null-target": {
+					"class": "MediaWiki\\Extension\\WikiRAG\\Target\\NullTarget"
+				}
+			},
+			"ContextProviders": {
+				"@wiki-structure": {
+					"class": "MediaWiki\\Extension\\WikiRAG\\ContextProvider\\WikiStructure",
+					"services": [ "DBLoadBalancer", "WikiRAG._IndexabilityChecker", "ContentLanguage", "NamespaceInfo" ]
+				},
+				"analyze": {
+					"class": "MediaWiki\\Extension\\WikiRAG\\ContextProvider\\AnalyzePrompts"
+				}
+			},
+			"DataProviders": {
+				"content.wikitext": {
+					"class": "MediaWiki\\Extension\\WikiRAG\\DataProvider\\RAGOptimizedWikiTextContent",
+					"services": [ "RevisionLookup", "WikiRAG._WikitextRAGOptimizer" ]
+				},
+				"raw.content.wikitext": {
+					"class": "MediaWiki\\Extension\\WikiRAG\\DataProvider\\WikiTextContent",
+					"services": [ "RevisionLookup" ]
+				},
+				"content.html": {
+					"class": "MediaWiki\\Extension\\WikiRAG\\DataProvider\\HtmlContent",
+					"services": [ "RevisionRenderer" ]
+				},
+				"repofile": {
+					"class": "MediaWiki\\Extension\\WikiRAG\\DataProvider\\RepoFile",
+					"services": [ "RepoGroup" ]
+				},
+				"meta.json": {
+					"class": "MediaWiki\\Extension\\WikiRAG\\DataProvider\\Metadata",
+					"services": [
+						"RevisionRenderer", "TitleFactory", "HookContainer", "PageProps", "RepoGroup",
+						"WikiRAG._IndexabilityChecker", "RevisionLookup", "RedirectLookup", "SpecialPageFactory"
+					]
+				},
+				"acl.json": {
+					"class": "MediaWiki\\Extension\\WikiRAG\\DataProvider\\ACL",
+					"services": [ "MainConfig", "ConfigFactory" ]
+				}
+			},
+			"ChangeObservers": {
+				"page-content": {
+					"class": "MediaWiki\\Extension\\WikiRAG\\ChangeObserver\\PageContentObserver",
+					"services": [ "HookContainer", "TitleFactory" ]
+				},
+				"deletion": {
+					"class": "MediaWiki\\Extension\\WikiRAG\\ChangeObserver\\PageDeletionObserver",
+					"services": [ "HookContainer", "TitleFactory" ]
+				},
+				"file-upload": {
+					"class": "MediaWiki\\Extension\\WikiRAG\\ChangeObserver\\FileUploadObserver",
+					"services": [ "HookContainer", "TitleFactory" ]
+				},
+				"@page-set": {
+					"class": "MediaWiki\\Extension\\WikiRAG\\ChangeObserver\\PageSetObserver",
+					"services": [ "HookContainer", "WikiRAG._IndexabilityChecker" ]
+				},
+				"prompts": {
+					"class": "MediaWiki\\Extension\\WikiRAG\\ChangeObserver\\PromptObserver",
+					"services": [ "HookContainer" ]
+				}
+			}
+		},
+		"BlueSpiceDistributionConnector": {
+			"ServiceModeTools": {
+				"wikirag": {
+					"class": "MediaWiki\\Extension\\WikiRAG\\ServiceMode\\WikiRAGServiceTool",
+					"services": [ "WikiRAG.Scheduler", "WikiRAG._Factory" ]
+				}
+			}
+		},
+		"BlueSpiceExtendedSearch": {
+			"PluginRegistry": {
+				"rag-identifier": {
+					"class": "MediaWiki\\Extension\\WikiRAG\\Integration\\SearchRAGIdentifierPlugin"
+				}
+			}
+		}
+	},
+	"ExtensionFunctions": [
+		"MediaWiki\\Extension\\WikiRAG\\InitializeChangeObservers::init"
+	],
+	"Hooks": {
+		"LoadExtensionSchemaUpdates": "runDatabaseUpdates",
+		"MWStakeRunJobsTriggerRegisterHandlers": "addExportQueueTask",
+		"WikiRAGMetadata": "addSemanticProperties",
+		"GetDoubleUnderscoreIDs": "addNoRAGMagic",
+		"StandardDialogsRegisterPageInfoPanelModules": "addExportHistoryInfo"
+	},
+	"HookHandlers": {
+		"runDatabaseUpdates": {
+			"class": "MediaWiki\\Extension\\WikiRAG\\Hook\\RunDatabaseUpdates"
+		},
+		"addExportQueueTask": {
+			"class": "MediaWiki\\Extension\\WikiRAG\\Hook\\AddExportQueueTask"
+		},
+		"addSemanticProperties": {
+			"class": "MediaWiki\\Extension\\WikiRAG\\Hook\\AddSemanticProperties",
+			"services": [ "WikiPageFactory" ]
+		},
+		"addNoRAGMagic": {
+			"class": "MediaWiki\\Extension\\WikiRAG\\Hook\\AddNoRAGMagic"
+		},
+		"addExportHistoryInfo": {
+			"class": "MediaWiki\\Extension\\WikiRAG\\Hook\\AddExportHistoryInfo"
+		}
+	},
+	"RestRoutes": [
+		{
+			"path": "/wikirag/v1/list",
+			"class": "MediaWiki\\Extension\\WikiRAG\\Rest\\GetScheduledHandler",
+			"services": [ "PermissionManager", "WikiRAG.Scheduler", "TitleFactory", "MainConfig" ]
+		},
+		{
+			"path": "/wikirag/v1/export",
+			"class": "MediaWiki\\Extension\\WikiRAG\\Rest\\ExportItemHandler",
+			"services": [ "PermissionManager", "WikiRAG.Runner", "TitleFactory", "MainConfig" ]
+		},
+		{
+			"path": "/wikirag/v1/export/history/{page_id}",
+			"class": "MediaWiki\\Extension\\WikiRAG\\Rest\\ExportHistoryHandler",
+			"services": [ "WikiRAG._IndexabilityChecker", "TitleFactory", "WikiRAG.Scheduler" ]
+		}
+	],
+	"config": {
+		"WikiRAGTarget": {
+			"value": {
+				"type": "null-target",
+				"configuration": {}
+			},
+			"description": "Target to store generated data. Array with 'type' and 'configuration' keys. 'type' is the target type, one of 'WikiRAGTargets' attribute. 'configuration' is an array or JSON string with configuration options for the target type."
+		},
+		"WikiRAGPipeline": {
+			"value": [],
+			"description": "Pipeline of data providers to use for generating data. Array of data provider names, from 'WikiRAGDataProviders' attribute."
+		},
+		"WikiRAGApiAllowedIP": {
+			"description": "CIDR to allow access to API",
+			"value": null
+		}
+	},
+	"ResourceModules": {
+		"ext.wikirag.visualEditorPlugin": {
+			"scripts": [
+				"ui/plugin/MWMetaDialog.js",
+				"dm/NoWikiRAGMetaItem.js",
+				"ext.wikirag.visualEditorPlugin.js"
+			],
+			"messages": [
+				"wikirag-ve-magic-label",
+				"wikirag-ve-magic-help",
+				"wikirag-ve-magic-yes",
+				"wikirag-ve-magic-no"
+			],
+			"dependencies": [
+				"ext.bluespice"
+			]
+		},
+		"ext.wikirag.pageInfo": {
+			"scripts": [
+				"ext.wikirag.pageInfo.js"
+			],
+			"messages": [
+				"wikirag-pageinfo-title",
+				"wikirag-pageinfo-export-status-label",
+				"wikirag-pageinfo-export-status-exported",
+				"wikirag-pageinfo-export-status-not-exported",
+				"wikirag-pageinfo-export-status-disabled"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "WikiRAG/resources"
+	},
+	"ServiceWiringFiles": [
+		"includes/ServiceWiring.php"
+	],
+	"callback": "mwsInitComponents",
+	"manifest_version": 2
+}
