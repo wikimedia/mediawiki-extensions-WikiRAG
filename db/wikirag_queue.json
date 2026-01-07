@@ -1,0 +1,40 @@
+[
+	{
+		"name": "wikirag_queue",
+		"columns": [
+			{
+				"name": "wrq_namespace",
+				"type": "integer",
+				"options": {
+					"unsigned": true,
+					"notnull": true
+				}
+			},
+			{
+				"name": "wrq_title",
+				"type": "binary",
+				"options": {
+					"notnull": true,
+					"length": 255
+				}
+			},
+			{
+				"name": "wrq_pipeline",
+				"type": "binary",
+				"options": {
+					"notnull": true,
+					"length": 255
+				}
+			},
+			{
+				"name": "wrq_scheduled_at",
+				"type": "mwtimestamp",
+				"options": {
+					"notnull": true
+				}
+			}
+		],
+		"indexes": [],
+		"pk": [ "wrq_namespace", "wrq_title", "wrq_pipeline" ]
+	}
+]

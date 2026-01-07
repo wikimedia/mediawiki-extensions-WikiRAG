@@ -1,0 +1,93 @@
+<!-- RAG atomic block start -->
+Template: Infobox
+	* name: Example Page
+	* type: Demo
+	* author: [[User:JohnDoe]]
+	* created: 2025-01-01
+<!-- RAG atomic block end -->
+<!-- RAG atomic block start -->
+[dummyTag foo="Bar"] Brown fox jumps over the lazy dog.
+<!-- RAG atomic block end -->
+ Other content
+<!-- RAG atomic block start -->
+[dummy:Tag foo="Bar"] Brown fox jumps over the lazy dog.
+<!-- RAG atomic block end -->
+<!-- RAG section break -->
+==Introduction==
+This is a '''sample''' page to demonstrate ''WikiText'' syntax for LLM testing.
+It includes various elements like lists, links, templates, tables, and HTML.
+<!-- RAG section break -->
+===Features===
+* Bold text: '''Important'''
+* Italic text: ''Emphasis''
+* Bold+Italic text: '''''Very important'''''
+* Internal link: [[Main Page|Home]]
+* External link: [https://example.com Example website]
+* Numbered list:
+# Step one
+# Step two
+## Substep 2a
+# Step three
+<!-- RAG section break -->
+==Template Examples==
+<!-- RAG atomic block start -->
+Template: Messagebox
+	* boxtype: info
+	* Note text: This is an informational message.
+<!-- RAG atomic block end -->
+<!-- RAG atomic block start -->
+Template: Citation needed
+	* date: 2025-10-23
+<!-- RAG atomic block end -->
+<!-- RAG section break -->
+==Table Example==
+<!-- RAG atomic block start -->
+Table:  Caption text
+Name: Alpha,Value: 10,Description: First entry,
+Name: Beta,Value: 20,Description: Second entry,
+Name: Gamma,Value: 30,Description: Third entry with HTML formatting,
+<!-- RAG atomic block end -->
+<!-- RAG section break -->
+==Templates==
+===Nested Templates===
+<!-- RAG atomic block start -->
+Template: Infobox person
+	* name: John Doe
+	* occupation: Scientist
+	* awards: Template: Award
+		* Nobel Prize in Physics
+	* more_awards: Template: Award
+		* type: National Medal of Science
+<!-- RAG atomic block end -->
+<!-- RAG section break -->
+==Advanced Syntax==
+* Nowiki example: <code>{{This should not be parsed}}</code>
+* Preformatted: 
+<!-- RAG atomic block start -->
+<pre>
+function test() {
+    console.log("Hello World");
+}
+</pre>
+<!-- RAG atomic block end -->
+* Comment:
+* Magic word:  displays current page name
+<!-- RAG section break -->
+==Links and Categories==
+[[Category:Demo]]
+[[Category:WikiText Examples]]
+[[File:Example.png|thumb|200px|Example image]]
+<!-- RAG section break -->
+==Conclusion==
+This page mixes:
+* Headings
+* Lists
+* Bold/Italic
+* Templates
+* Tables
+* HTML
+* Magic words
+* Comments
+* Links
+* Categories
+It is intentionally complex to show what LLMs may struggle with.
