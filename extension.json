@@ -120,7 +120,7 @@
 	],
 	"Hooks": {
 		"LoadExtensionSchemaUpdates": "runDatabaseUpdates",
-		"MWStakeRunJobsTriggerRegisterHandlers": "addExportQueueTask",
+		"MediaWikiServices": "addExportQueueCron",
 		"WikiRAGMetadata": "addSemanticProperties",
 		"GetDoubleUnderscoreIDs": "addNoRAGMagic",
 		"StandardDialogsRegisterPageInfoPanelModules": "addExportHistoryInfo"
@@ -129,8 +129,8 @@
 		"runDatabaseUpdates": {
 			"class": "MediaWiki\\Extension\\WikiRAG\\Hook\\RunDatabaseUpdates"
 		},
-		"addExportQueueTask": {
-			"class": "MediaWiki\\Extension\\WikiRAG\\Hook\\AddExportQueueTask"
+		"addExportQueueCron": {
+			"class": "MediaWiki\\Extension\\WikiRAG\\Hook\\AddExportQueueCron"
 		},
 		"addSemanticProperties": {
 			"class": "MediaWiki\\Extension\\WikiRAG\\Hook\\AddSemanticProperties",
