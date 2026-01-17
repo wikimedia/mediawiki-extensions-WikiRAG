@@ -106,10 +106,10 @@ class IndexabilityCheckerTest extends TestCase {
 	private function getNamespaceInfo() {
 		$mock = $this->createMock( NamespaceInfo::class );
 		$mock->method( 'isContent' )->willReturnCallback(
-			fn ( int $ns ) => in_array( $ns, [ NS_MAIN, NS_PROJECT ] )
+			static fn ( int $ns ) => in_array( $ns, [ NS_MAIN, NS_PROJECT ] )
 		);
 		$mock->method( 'isSubject' )->willReturnCallback(
-			fn ( int $ns ) => $ns % 2 === 0
+			static fn ( int $ns ) => $ns % 2 === 0
 		);
 		return $mock;
 	}

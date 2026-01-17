@@ -5,7 +5,6 @@ namespace MediaWiki\Extension\WikiRAG\Tests\Unit;
 use PHPUnit\Framework\TestCase;
 
 /**
- *
  * @covers \MediaWiki\Extension\WikiRAG\Util\WikitextRAGOptimizer
  */
 class WikitextRAGOptimizerTest extends TestCase {

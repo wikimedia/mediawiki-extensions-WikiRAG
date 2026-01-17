@@ -7,7 +7,6 @@ use MediaWiki\Page\PageIdentity;
 use PHPUnit\Framework\TestCase;
 
 /**
- *
  * @covers \MediaWiki\Extension\WikiRAG\ResourceIdGenerator
  */
 class ResourceIdGeneratorTest extends TestCase {

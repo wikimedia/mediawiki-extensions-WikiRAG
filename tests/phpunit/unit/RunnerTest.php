@@ -20,7 +20,6 @@ use PHPUnit\Framework\TestCase;
 use Wikimedia\ObjectFactory\ObjectFactory;
 
 /**
- *
  * @covers \MediaWiki\Extension\WikiRAG\ResourceIdGenerator
  */
 class RunnerTest extends TestCase {
