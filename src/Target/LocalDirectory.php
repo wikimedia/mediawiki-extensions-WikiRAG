@@ -3,6 +3,7 @@
 namespace MediaWiki\Extension\WikiRAG\Target;
 
 use Config;
+use MediaWiki\Extension\WikiRAG\ContentRetrievableTarget;
 use MediaWiki\Extension\WikiRAG\ITarget;
 use MediaWiki\Extension\WikiRAG\ResourceSpecifier;
 
@@ -15,7 +16,7 @@ use MediaWiki\Extension\WikiRAG\ResourceSpecifier;
  *   ]
  * ]
  */
-class LocalDirectory implements ITarget {
+class LocalDirectory implements ITarget, ContentRetrievableTarget {
 
 	/** @var Config|null */
 	private ?Config $config = null;
@@ -60,5 +61,26 @@ class LocalDirectory implements ITarget {
 			}
 		}
 		return $path . DIRECTORY_SEPARATOR . $result->getFileName();
+	}
+
+	/**
+	 * @param ResourceSpecifier $resource
+	 * @return string|null
+	 */
+	public function retrieve( ResourceSpecifier $resource ): ?string {
+		try {
+			$path = $this->getTargetPath( $resource );
+			if ( file_exists( $path ) ) {
+				$content = file_get_contents( $path );
+				if ( $content === false ) {
+					return null;
+				}
+				return $content;
+			} else {
+				return null;
+			}
+		} catch ( \Throwable $ex ) {
+			return null;
+		}
 	}
 }

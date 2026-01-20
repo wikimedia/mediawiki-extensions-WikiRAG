@@ -5,6 +5,7 @@ namespace MediaWiki\Extension\WikiRAG\DataProvider;
 use MediaWiki\Extension\WikiRAG\ResourceIdGenerator;
 use MediaWiki\Extension\WikiRAG\Util\IndexabilityChecker;
 use MediaWiki\HookContainer\HookContainer;
+use MediaWiki\Linker\LinkTarget;
 use MediaWiki\Page\PageProps;
 use MediaWiki\Page\RedirectLookup;
 use MediaWiki\Parser\ParserOutput;
@@ -72,6 +73,8 @@ class Metadata extends HtmlContent {
 			'linked_pages' => $this->getLinkedPages( $title ),
 			'subpage-of' => $this->getBaseTitleId( $title ),
 			'noindex' => $this->getNoRAG( $revision ),
+			'includes' => $this->getInclusions( $revision ),
+			'sections' => $this->getSections( $revision ),
 		];
 		$file = $this->getFileForRevision( $revision );
 		if ( $file !== null ) {
@@ -231,6 +234,37 @@ class Metadata extends HtmlContent {
 			}
 		}
 		return $link;
+	}
+
+	/**
+	 * @param RevisionRecord $revision
+	 * @return array
+	 */
+	private function getInclusions( RevisionRecord $revision ): array {
+		$output = $this->getParserOutput( $revision );
+		if ( !$output ) {
+			return [];
+		}
+		$includedPages = [];
+		$templates = $output->getLinkList( ParserOutputLinkTypes::TEMPLATE );
+		/** @var LinkTarget $template */
+		foreach ( $templates as $template ) {
+			$includedPages[] = $template['link']->getText();
+		}
+
+		return $includedPages;
+	}
+
+	/**
+	 * @param RevisionRecord $revision
+	 * @return array
+	 */
+	private function getSections( RevisionRecord $revision ): array {
+		$output = $this->getParserOutput( $revision );
+		if ( !$output ) {
+			return [];
+		}
+		return $output->getSections();
 	}
 
 }
