@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Volvox"
+		]
+	},
+	"wikirag-pageinfo-export-status-exported": "Exportéiert",
+	"wikirag-pageinfo-export-status-not-exported": "Nach net exportéiert",
+	"wikirag-pageinfo-export-status-label": "Exportstatus"
+}

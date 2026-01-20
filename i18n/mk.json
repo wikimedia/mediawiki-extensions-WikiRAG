@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"wikirag-desc": "Дополнувачки слој за големи јазични модели (ГЈМ) поткрепени од вики",
+	"wikirag-ve-magic-label": "Може да се индексира за ChatBot",
+	"wikirag-ve-magic-help": "Дали е дозволено оваа страница да се користи како извор за ChatBot",
+	"wikirag-ve-magic-yes": "Да, дозволи индексирање",
+	"wikirag-ve-magic-no": "Не, не индексирај",
+	"wikirag-servicemode-full-reindex": "Направи целосно преиндексирање (веднаш)",
+	"wikirag-servicemode-schedule-reindex": "Закажи целосно преиндексирање",
+	"wikirag-pageinfo-title": "Статус на индексирањето на ChatBot",
+	"wikirag-pageinfo-export-status-exported": "Извезено",
+	"wikirag-pageinfo-export-status-disabled": "Не е подобно за извоз",
+	"wikirag-pageinfo-export-status-not-exported": "Сè уште не е извезено",
+	"wikirag-pageinfo-export-status-label": "Статус на извозот"
+}
