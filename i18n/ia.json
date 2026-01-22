@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"wikirag-desc": "Strato de augmentation pro LLMs actionate per wiki",
+	"wikirag-ve-magic-label": "Pote esser indexate pro ChatBot",
+	"wikirag-ve-magic-help": "Es permittite usar iste pagina como fonte pro ChatBot?",
+	"wikirag-ve-magic-yes": "Si, permitter indexation",
+	"wikirag-ve-magic-no": "No, non indexar",
+	"wikirag-servicemode-full-reindex": "Executar reindexation complete (immediate)",
+	"wikirag-servicemode-schedule-reindex": "Planificar indexation complete",
+	"wikirag-pageinfo-title": "Stato de indexation de ChatBot",
+	"wikirag-pageinfo-export-status-exported": "Exportate",
+	"wikirag-pageinfo-export-status-disabled": "Non eligibile pro exportation",
+	"wikirag-pageinfo-export-status-not-exported": "Non ancora exportate",
+	"wikirag-pageinfo-export-status-label": "Stato de exportation"
+}
