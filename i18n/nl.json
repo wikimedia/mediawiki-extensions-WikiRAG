@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Siebrand"
+		]
+	},
+	"wikirag-desc": "Uitbreidingslaag voor wiki-gestuurde LLM's",
+	"wikirag-ve-magic-label": "Kan worden geïndexeerd voor chatbots",
+	"wikirag-ve-magic-help": "Mag deze pagina als bron voor een chatbot worden gebruikt?",
+	"wikirag-ve-magic-yes": "Ja, indexeren toestaan",
+	"wikirag-ve-magic-no": "Nee, niet indexeren",
+	"wikirag-servicemode-full-reindex": "Volledige herindexering uitvoeren (onmiddellijk)",
+	"wikirag-servicemode-schedule-reindex": "Volledige herindexering plannen",
+	"wikirag-pageinfo-title": "Indexeringsstatus van de chatbot",
+	"wikirag-pageinfo-export-status-exported": "Geëxporteerd",
+	"wikirag-pageinfo-export-status-disabled": "Komt niet in aanmerking voor expoteren",
+	"wikirag-pageinfo-export-status-not-exported": "Nog niet geëxporteerd",
+	"wikirag-pageinfo-export-status-label": "Exportstatus"
+}
