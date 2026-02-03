@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Peterxy12"
+		]
+	},
+	"wikirag-pageinfo-export-status-exported": "已导出",
+	"wikirag-pageinfo-export-status-disabled": "不符合导出条件",
+	"wikirag-pageinfo-export-status-not-exported": "尚未导出",
+	"wikirag-pageinfo-export-status-label": "导出状态"
+}
