@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"wikirag-desc": "Capa de aumento para LLM con tecnoloxía wiki",
+	"wikirag-ve-magic-label": "Pódese indexar para ChatBot",
+	"wikirag-ve-magic-help": "Permítese usar esta páxina como fonte para ChatBot?",
+	"wikirag-ve-magic-yes": "Si, permitir a indexación",
+	"wikirag-ve-magic-no": "Non, non indexar",
+	"wikirag-servicemode-full-reindex": "Executar a reindexación completa (inmediata)",
+	"wikirag-servicemode-schedule-reindex": "Programar a reindexación completa",
+	"wikirag-pageinfo-title": "Estado da indexación de ChatBot",
+	"wikirag-pageinfo-export-status-exported": "Exportada",
+	"wikirag-pageinfo-export-status-disabled": "Non apta para a exportación",
+	"wikirag-pageinfo-export-status-not-exported": "Aínda non exportada",
+	"wikirag-pageinfo-export-status-label": "Estado da exportación"
+}

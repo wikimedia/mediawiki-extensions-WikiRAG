@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kly"
+		]
+	},
+	"wikirag-desc": "用於 wiki 驅動大語言模型的增強層",
+	"wikirag-ve-magic-label": "可為聊天機器人建立索引",
+	"wikirag-ve-magic-help": "此頁面是否能作為聊天機器人的來源？",
+	"wikirag-ve-magic-yes": "是的，允許索引",
+	"wikirag-ve-magic-no": "不，不允許索引",
+	"wikirag-servicemode-full-reindex": "執行完整的重新索引（立即）",
+	"wikirag-servicemode-schedule-reindex": "安排完整的重新索引",
+	"wikirag-pageinfo-title": "聊天機器人索引狀態",
+	"wikirag-pageinfo-export-status-exported": "已匯出",
+	"wikirag-pageinfo-export-status-disabled": "不符合匯出條件",
+	"wikirag-pageinfo-export-status-not-exported": "尚未匯出",
+	"wikirag-pageinfo-export-status-label": "匯出狀態"
+}
