@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Neriah"
+		]
+	},
+	"wikirag-ve-magic-label": "ניתן לאינדקס עבור צ'אטבוט",
+	"wikirag-ve-magic-help": "האם לאפשר לצ'אטבוט להשתמש בדף זה כמקור?",
+	"wikirag-ve-magic-yes": "כן, אפשר אינדקס",
+	"wikirag-ve-magic-no": "לא, אל תאפשר אינדקס",
+	"wikirag-servicemode-full-reindex": "בצע אינדקס מלא מחדש (מיידי)",
+	"wikirag-servicemode-schedule-reindex": "תזמון אינדקס מלא מחדש",
+	"wikirag-pageinfo-title": "סטטוס אינדוקס של צ'אטבוט",
+	"wikirag-pageinfo-export-status-exported": "יוצא",
+	"wikirag-pageinfo-export-status-disabled": "אינו ניתן לייצוא",
+	"wikirag-pageinfo-export-status-not-exported": "עדיין לא יוצא",
+	"wikirag-pageinfo-export-status-label": "מצב הייצוא"
+}
