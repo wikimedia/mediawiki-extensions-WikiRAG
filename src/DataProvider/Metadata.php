@@ -61,6 +61,7 @@ class Metadata extends HtmlContent {
 		$meta = [
 			'wiki_id' => WikiMap::getCurrentWikiId(),
 			'title' => $title->getPrefixedText(),
+			'namespace_id' => $title->getNamespace(),
 			'namespace_text' => $title->getNsText(),
 			'url' => $this->getPermalink( $revision ),
 			'modification-date' => $revision->getTimestamp(),
@@ -264,7 +265,9 @@ class Metadata extends HtmlContent {
 		if ( !$output ) {
 			return [];
 		}
-		return $output->getSections();
+		$sections = $output->getSections();
+		return array_filter( array_map( static function ( $s ) {
+			return $s['line'] ?? null;
+		}, $sections ) );
 	}
-
 }
