@@ -31,6 +31,9 @@ class SearchRAGIdentifierPlugin implements ISearchPlugin, IFormattingModifier {
 		if ( !( $source instanceof WikiPages ) ) {
 			return;
 		}
+		if ( !$result['page_id'] ) {
+			return;
+		}
 		$title = Title::newFromRow( (object)[
 			'page_id' => $result['page_id'],
 			'page_namespace' => $result['namespace'],
