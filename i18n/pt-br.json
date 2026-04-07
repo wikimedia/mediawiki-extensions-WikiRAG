@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eduardoaddad"
+		]
+	},
+	"wikirag-desc": "Camada de ampliação para LLMs baseados em wiki",
+	"wikirag-ve-magic-label": "Pode ser indexado para o ChatBot"
+}
