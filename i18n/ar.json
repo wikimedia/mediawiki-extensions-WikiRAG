@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Meno25"
+		]
+	},
+	"wikirag-desc": "طبقة إضافية لبرامج إدارة التعلم المدعومة بنظام ويكي",
+	"wikirag-ve-magic-label": "يمكن فهرستها لبرامج الدردشة الآلية",
+	"wikirag-ve-magic-help": "هل يُسمح باستخدام هذه الصفحة كمصدر لبرنامج الدردشة الآلي؟",
+	"wikirag-ve-magic-yes": "نعم، السماح بالفهرسة",
+	"wikirag-ve-magic-no": "لا، لا تقم بالفهرسة",
+	"wikirag-servicemode-full-reindex": "تنفيذ إعادة فهرسة كاملة (فوري)",
+	"wikirag-servicemode-schedule-reindex": "جدول إعادة فهرسة كاملة",
+	"wikirag-pageinfo-title": "حالة فهرسة روبوت الدردشة",
+	"wikirag-pageinfo-export-status-exported": "تم التصدير",
+	"wikirag-pageinfo-export-status-disabled": "غير مؤهل للتصدير",
+	"wikirag-pageinfo-export-status-not-exported": "لم يتم تصديرها بعد",
+	"wikirag-pageinfo-export-status-label": "حالة التصدير"
+}
