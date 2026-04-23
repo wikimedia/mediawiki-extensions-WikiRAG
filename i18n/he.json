@@ -6,8 +6,8 @@
 		]
 	},
 	"wikirag-ve-magic-label": "ניתן למפתח עבור צ'אטבוט",
-	"wikirag-ve-magic-help": "האם לאפשר לצ'אטבוט להשתמש בדף זה כמקור?",
-	"wikirag-ve-magic-yes": "כן, אפשר מפתוח",
+	"wikirag-ve-magic-help": "האם לאפשר לצ'אטבוט להשתמש בדף הזה כמקור",
+	"wikirag-ve-magic-yes": "כן, לאפשר מפתוח",
 	"wikirag-ve-magic-no": "לא, לא לאפשר מפתוח",
 	"wikirag-servicemode-full-reindex": "לבצע מפתוח מלא מחדש (מיידי)",
 	"wikirag-servicemode-schedule-reindex": "תזמון מפתוח חוזר מלא",
