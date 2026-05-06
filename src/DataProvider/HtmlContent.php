@@ -26,7 +26,7 @@ class HtmlContent implements IPageDataProvider {
 	 */
 	public function provideForRevision( RevisionRecord $revision ): string {
 		$output = $this->getRenderedOutput( $revision );
-		return $output->getRawText() ?? '';
+		return $output->getContentHolderText() ?? '';
 	}
 
 	/**

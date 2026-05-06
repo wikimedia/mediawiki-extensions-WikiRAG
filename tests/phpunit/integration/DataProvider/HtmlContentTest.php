@@ -80,7 +80,7 @@ class HtmlContentTest extends MediaWikiIntegrationTestCase {
 		$renderedRevision = $this->createMock( RenderedRevision::class );
 		$output = $this->createMock( ParserOutput::class );
 		$output->method( 'runOutputPipeline' )->willReturn( $output );
-		$output->method( 'getRawText' )->willReturn( $text );
+		$output->method( 'getContentHolderText' )->willReturn( $text );
 		$renderedRevision->method( 'getRevisionParserOutput' )->willReturn( $output );
 		$revisionRenderer->method( 'getRenderedRevision' )->willReturn( $renderedRevision );
 		return $revisionRenderer;
