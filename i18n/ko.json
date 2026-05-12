@@ -4,6 +4,7 @@
 			"Tensama0415"
 		]
 	},
+	"wikirag-desc": "위키 기반 LLM을 위한 증강층",
 	"wikirag-ve-magic-yes": "예, 인덱싱을 허용합니다",
 	"wikirag-ve-magic-no": "아니오, 인덱싱을 하지 않습니다",
 	"wikirag-pageinfo-export-status-exported": "내보냄",
