@@ -58,6 +58,9 @@ class FileUploadObserver extends HookObserver implements
 			return;
 		}
 		$title = $this->titleFactory->makeTitle( NS_FILE, $uploadBase->getTitle()->getDBkey() );
+		if ( !in_array( $uploadBase->getLocalFile()?->getMediaType(), [ 'OFFICE', 'TEXT' ] ) ) {
+			return;
+		}
 		$this->scheduler?->schedule( $title, $this->pipeline );
 	}
 
