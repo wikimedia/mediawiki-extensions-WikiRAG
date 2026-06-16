@@ -2,9 +2,18 @@
 	"@metadata": {
 		"authors": [
 			"Peterxy12",
-			"Peterxy"
+			"Peterxy",
+			"GuoPC"
 		]
 	},
+	"wikirag-desc": "用于wiki驱动大语言模型的增强层",
+	"wikirag-ve-magic-label": "可为聊天机器人建立索引",
+	"wikirag-ve-magic-help": "此页面是否能作为聊天机器人的来源？",
+	"wikirag-ve-magic-yes": "是，允许索引",
+	"wikirag-ve-magic-no": "不，不允许索引",
+	"wikirag-servicemode-full-reindex": "执行完整的重新索引（立即）",
+	"wikirag-servicemode-schedule-reindex": "安排完整的重新索引",
+	"wikirag-pageinfo-title": "聊天机器人索引状态",
 	"wikirag-pageinfo-export-status-exported": "已导出",
 	"wikirag-pageinfo-export-status-disabled": "不符合导出条件",
 	"wikirag-pageinfo-export-status-not-exported": "尚未导出",
