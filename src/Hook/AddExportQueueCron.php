@@ -25,6 +25,6 @@ class AddExportQueueCron implements MediaWikiServicesHook {
 				'class' => ExportQueue::class,
 				'services' => [ 'WikiRAG.Scheduler' ],
 			]
-		] ) );
+		], 3600 ) );
 	}
 }
