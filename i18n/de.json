@@ -4,5 +4,9 @@
 			"[http://www.hallowelt.com Hallo Welt! GmbH]"
 		]
 	},
-	"wikirag-desc": "Erweiterungsschicht für wiki-gestützte LLMs"
+	"wikirag-desc": "Erweiterungsschicht für wiki-gestützte LLMs",
+	"wikirag-ve-magic-label": "Chatbot Indexierung",
+	"wikirag-ve-magic-help": "{{#FORMAL: Du kannst|Sie können}} festlegen, ob die Seite als Quelle für die Antworten des Chatbots verwendet werden darf.",
+	"wikirag-ve-magic-yes": "Ja",
+	"wikirag-ve-magic-no": "Nein"
 }
