@@ -1,16 +1,17 @@
 {
 	"@metadata": {
 		"authors": [
+			"Suleiman the Magnificent Television",
 			"Tensama0415"
 		]
 	},
-	"wikirag-ve-magic-yes": "예, 인덱싱을 허용합니다",
-	"wikirag-ve-magic-no": "아니오, 인덱싱을 하지 않습니다",
+	"wikirag-ve-magic-yes": "예",
+	"wikirag-ve-magic-no": "아니오",
 	"wikirag-pageinfo-export-status-exported": "내보냄",
 	"wikirag-pageinfo-export-status-label": "내보내기 상태",
 	"wikirag-desc": "위키 기반 LLM을 위한 증강층",
-	"wikirag-ve-magic-label": "챗봇용으로 색인화 될 수 있음",
-	"wikirag-ve-magic-help": "이 문서가 챗봇의 소스로써 허용되어 있는지",
+	"wikirag-ve-magic-label": "챗봇 색인화",
+	"wikirag-ve-magic-help": "이 문서를 챗봇의 응답의 소스로써 사용할 수 있는지를 지정할 수 있습니다.",
 	"wikirag-servicemode-full-reindex": "전체 재색인 실행 (즉시)",
 	"wikirag-servicemode-schedule-reindex": "전체 재색인 스케줄",
 	"wikirag-pageinfo-title": "챗봇 색인 상태",

@@ -6,5 +6,7 @@
 	},
 	"wikirag-pageinfo-export-status-exported": "Exportéiert",
 	"wikirag-pageinfo-export-status-not-exported": "Nach net exportéiert",
-	"wikirag-pageinfo-export-status-label": "Exportstatus"
+	"wikirag-pageinfo-export-status-label": "Exportstatus",
+	"wikirag-ve-magic-yes": "Jo",
+	"wikirag-ve-magic-no": "Nee"
 }
