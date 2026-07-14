@@ -1,14 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Siebrand"
+			"Siebrand",
+			"McDutchie"
 		]
 	},
 	"wikirag-desc": "Uitbreidingslaag voor wiki-gestuurde LLM's",
-	"wikirag-ve-magic-label": "Kan worden geïndexeerd voor chatbots",
-	"wikirag-ve-magic-help": "Mag deze pagina als bron voor een chatbot worden gebruikt?",
-	"wikirag-ve-magic-yes": "Ja, indexeren toestaan",
-	"wikirag-ve-magic-no": "Nee, niet indexeren",
+	"wikirag-ve-magic-label": "Chatbot-indexering",
+	"wikirag-ve-magic-help": "U kunt aangeven of deze pagina als bron voor de antwoorden van de chatbot mag worden gebruikt.",
+	"wikirag-ve-magic-yes": "Ja",
+	"wikirag-ve-magic-no": "Nee",
 	"wikirag-servicemode-full-reindex": "Volledige herindexering uitvoeren (onmiddellijk)",
 	"wikirag-servicemode-schedule-reindex": "Volledige herindexering plannen",
 	"wikirag-pageinfo-title": "Indexeringsstatus van de chatbot",
