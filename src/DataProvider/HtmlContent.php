@@ -61,7 +61,7 @@ class HtmlContent implements IPageDataProvider {
 			);
 		}
 		return $output->runOutputPipeline( ParserOptions::newFromUser(
-			User::newSystemUser( 'MediaWiki default', [ 'steal' => true ] )
+			User::newSystemUser( User::MAINTENANCE_SCRIPT_USER, [ 'steal' => true ] )
 		), [
 			'allowTOC' => false,
 			'enableSectionEditLinks' => false
