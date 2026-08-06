@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\WikiRAG\Tests\Unit\DataProvider;
 
-use Config;
+use MediaWiki\Config\Config;
 use MediaWiki\Config\ConfigFactory;
 use MediaWiki\Extension\WikiRAG\DataProvider\ACL;
 use MediaWiki\Page\PageIdentity;

@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\WikiRAG;
 
-use Config;
+use MediaWiki\Config\Config;
 
 interface ITarget {
 

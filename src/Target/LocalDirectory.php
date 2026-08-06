@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\WikiRAG\Target;
 
-use Config;
+use MediaWiki\Config\Config;
 use MediaWiki\Extension\WikiRAG\ContentRetrievableTarget;
 use MediaWiki\Extension\WikiRAG\ITarget;
 use MediaWiki\Extension\WikiRAG\ResourceSpecifier;

@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\WikiRAG\DataProvider;
 
-use Config;
+use MediaWiki\Config\Config;
 use MediaWiki\Config\ConfigFactory;
 use MediaWiki\Extension\WikiRAG\IPageDataProvider;
 use MediaWiki\Page\PageIdentity;

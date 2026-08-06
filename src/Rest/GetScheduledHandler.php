@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\WikiRAG\Rest;
 
-use Config;
+use MediaWiki\Config\Config;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\WikiRAG\ResourceIdGenerator;
 use MediaWiki\Extension\WikiRAG\Scheduler;
