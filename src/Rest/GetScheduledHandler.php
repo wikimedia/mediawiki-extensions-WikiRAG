@@ -28,6 +28,9 @@ class GetScheduledHandler extends SimpleHandler {
 	) {
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function execute() {
 		$this->assertClientAllowed( $this->config );
 		if ( !$this->permissionManager->userHasRight( RequestContext::getMain()->getUser(), 'read' ) ) {
