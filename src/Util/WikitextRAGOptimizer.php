@@ -252,7 +252,7 @@ class WikitextRAGOptimizer {
 					} elseif ( str_starts_with( $line, '|' ) ) {
 						// Data row
 						$cells = explode( '||', ltrim( $line, '|' ) );
-						$cells = array_filter( $cells, fn ( $cell ) => trim( $cell ) !== '' );
+						$cells = array_filter( $cells, static fn ( $cell ) => trim( $cell ) !== '' );
 						$rowData = array_merge( $rowData, array_map( static function ( $c ) {
 							$c = trim( $c );
 							$output = '';

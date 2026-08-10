@@ -27,6 +27,9 @@ class ExportItemHandler extends SimpleHandler {
 	) {
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function execute() {
 		$this->assertClientAllowed( $this->config );
 		$params = $this->getValidatedParams();
