@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"شاه زمان پټان"
+		]
+	},
+	"wikirag-desc": "د ويکي ملاتړ لرونکو زده کړو مهاروونکو غونډالونو لپاره يو زياتي پوړ.",
+	"wikirag-ve-magic-label": "بنډارروباټ ليکلړول",
+	"wikirag-ve-magic-help": "تاسو کولی شئ مشخص کړئ چې ايا دا مخ د بنډارروباټ ځوابونو لپاره د سرچينې په توگه کارول کېدی شي.",
+	"wikirag-ve-magic-yes": "هو",
+	"wikirag-ve-magic-no": "نه",
+	"wikirag-servicemode-full-reindex": "بشپړ بياليکلړ اجرا کړئ (سملاسي)",
+	"wikirag-servicemode-schedule-reindex": "بشپړ بياليکلړ مهالوېش کړئ",
+	"wikirag-pageinfo-title": "د بنډارروباټ ليکلړولو دريځ",
+	"wikirag-pageinfo-export-status-exported": "بهرلېږل‌شوی",
+	"wikirag-pageinfo-export-status-disabled": "بهرلېږلو وړ نه دی",
+	"wikirag-pageinfo-export-status-not-exported": "تراوسه بهرلېږل‌شوی نه دی",
+	"wikirag-pageinfo-export-status-label": "بهرلېږلو دريځ"
+}

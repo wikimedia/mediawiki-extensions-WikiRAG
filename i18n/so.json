@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"AhmedG612"
+		]
+	},
+	"wikirag-desc": "Lakabka kordhinta ee LLM-yada ay wikigu awood siiso",
+	"wikirag-ve-magic-label": "Tusmaynta chatbot-ka",
+	"wikirag-ve-magic-help": "Waxaad cayimi kartaa in boggan loo isticmaali karo il laga soo xigto jawaabaha chatbot-ka.",
+	"wikirag-ve-magic-yes": "Haa",
+	"wikirag-ve-magic-no": "Maya",
+	"wikirag-servicemode-full-reindex": "Fuli dib u tusmayn buuxda (isla markiiba)",
+	"wikirag-servicemode-schedule-reindex": "Jadwal u samee dib u tusmaynta buuxda",
+	"wikirag-pageinfo-title": "Xaaladda tusmaynta chatbot-ka",
+	"wikirag-pageinfo-export-status-exported": "La dhoofiyay",
+	"wikirag-pageinfo-export-status-disabled": "Uma qalmo dhoofinta",
+	"wikirag-pageinfo-export-status-not-exported": "Weli lama dhoofin",
+	"wikirag-pageinfo-export-status-label": "Xaaladda dhoofinta"
+}
