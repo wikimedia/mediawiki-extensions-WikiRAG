@@ -2,10 +2,10 @@
 
 namespace MediaWiki\Extension\WikiRAG\ChangeObserver;
 
-use ManualLogEntry;
 use MediaWiki\Extension\WikiRAG\Util\IndexabilityChecker;
 use MediaWiki\Hook\PageMoveCompleteHook;
 use MediaWiki\HookContainer\HookContainer;
+use MediaWiki\Logging\ManualLogEntry;
 use MediaWiki\Page\Hook\PageDeleteCompleteHook;
 use MediaWiki\Page\Hook\PageUndeleteCompleteHook;
 use MediaWiki\Page\PageIdentityValue;

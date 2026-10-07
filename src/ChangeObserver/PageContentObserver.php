@@ -2,9 +2,9 @@
 
 namespace MediaWiki\Extension\WikiRAG\ChangeObserver;
 
-use ManualLogEntry;
 use MediaWiki\Hook\PageMoveCompleteHook;
 use MediaWiki\HookContainer\HookContainer;
+use MediaWiki\Logging\ManualLogEntry;
 use MediaWiki\Page\Hook\PageUndeleteCompleteHook;
 use MediaWiki\Page\ProperPageIdentity;
 use MediaWiki\Permissions\Authority;
