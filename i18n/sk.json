@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"wikirag-desc": "Rozširujúca vrstva pre LLM poháňané wiki",
+	"wikirag-ve-magic-label": "Indexovanie pre chatbota",
+	"wikirag-ve-magic-help": "Môžete určiť, či sa táto stránka môže použiť ako zdroj pre odpovede chatbota.",
+	"wikirag-ve-magic-yes": "Áno",
+	"wikirag-ve-magic-no": "Nie",
+	"wikirag-servicemode-full-reindex": "Vykonať úplnú reindexáciu (okamžite)",
+	"wikirag-servicemode-schedule-reindex": "Naplánovať úplnú reindexáciu",
+	"wikirag-pageinfo-title": "Stav indexovania pre chatbota",
+	"wikirag-pageinfo-export-status-exported": "Exportované",
+	"wikirag-pageinfo-export-status-disabled": "Nevhodné na export",
+	"wikirag-pageinfo-export-status-not-exported": "Zatiaľ neexportované",
+	"wikirag-pageinfo-export-status-label": "Stav exportu"
+}
