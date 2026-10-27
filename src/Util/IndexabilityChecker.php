@@ -2,10 +2,10 @@
 
 namespace MediaWiki\Extension\WikiRAG\Util;
 
+use MediaWiki\FileRepo\RepoGroup;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Page\PageIdentity;
 use MediaWiki\Title\NamespaceInfo;
-use RepoGroup;
 use Wikimedia\Rdbms\ILoadBalancer;
 use Wikimedia\Rdbms\IResultWrapper;
 
