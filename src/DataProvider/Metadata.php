@@ -4,6 +4,7 @@ namespace MediaWiki\Extension\WikiRAG\DataProvider;
 
 use MediaWiki\Extension\WikiRAG\ResourceIdGenerator;
 use MediaWiki\Extension\WikiRAG\Util\IndexabilityChecker;
+use MediaWiki\FileRepo\File\File;
 use MediaWiki\FileRepo\RepoGroup;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Linker\LinkTarget;
@@ -140,7 +141,7 @@ class Metadata extends HtmlContent {
 
 	/**
 	 * @param RevisionRecord $revision
-	 * @return \File|null
+	 * @return File|null
 	 */
 	private function getFileForRevision( RevisionRecord $revision ): ?\File {
 		$options = [];
