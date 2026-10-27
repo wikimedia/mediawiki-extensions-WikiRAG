@@ -4,6 +4,7 @@ namespace MediaWiki\Extension\WikiRAG\Tests\Unit;
 
 use MediaWiki\Extension\WikiRAG\Util\IndexabilityChecker;
 use MediaWiki\FileRepo\File\File;
+use MediaWiki\FileRepo\LocalRepo;
 use MediaWiki\FileRepo\RepoGroup;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Page\PageIdentity;
@@ -130,7 +131,7 @@ class IndexabilityCheckerTest extends TestCase {
 	 * @return RepoGroup
 	 */
 	private function getRepoGroup() {
-		$localRepo = $this->createMock( \LocalRepo::class );
+		$localRepo = $this->createMock( LocalRepo::class );
 		$localRepo->method( 'findFile' )->willReturnCallback(
 			static function ( PageIdentity $page ) {
 				if ( $page->getDBkey() === 'ExistsOffice' ) {
