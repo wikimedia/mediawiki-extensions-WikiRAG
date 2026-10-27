@@ -2,8 +2,8 @@
 
 namespace MediaWiki\Extension\WikiRAG\Tests\Unit;
 
-use File;
 use MediaWiki\Extension\WikiRAG\Util\IndexabilityChecker;
+use MediaWiki\FileRepo\File\File;
 use MediaWiki\FileRepo\RepoGroup;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Page\PageIdentity;

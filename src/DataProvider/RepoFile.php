@@ -2,8 +2,8 @@
 
 namespace MediaWiki\Extension\WikiRAG\DataProvider;
 
-use File;
 use MediaWiki\Extension\WikiRAG\IAttachmentProvider;
+use MediaWiki\FileRepo\File\File;
 use MediaWiki\FileRepo\RepoGroup;
 use MediaWiki\Page\PageIdentity;
 use MediaWiki\Revision\RevisionRecord;
