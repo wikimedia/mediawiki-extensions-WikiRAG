@@ -4,11 +4,11 @@ namespace MediaWiki\Extension\WikiRAG\Tests\Unit;
 
 use File;
 use MediaWiki\Extension\WikiRAG\Util\IndexabilityChecker;
+use MediaWiki\FileRepo\RepoGroup;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Page\PageIdentity;
 use MediaWiki\Title\NamespaceInfo;
 use PHPUnit\Framework\TestCase;
-use RepoGroup;
 
 /** *
  * @covers \MediaWiki\Extension\WikiRAG\Util\IndexabilityChecker

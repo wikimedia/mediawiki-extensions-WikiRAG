@@ -4,9 +4,9 @@ namespace MediaWiki\Extension\WikiRAG\DataProvider;
 
 use File;
 use MediaWiki\Extension\WikiRAG\IAttachmentProvider;
+use MediaWiki\FileRepo\RepoGroup;
 use MediaWiki\Page\PageIdentity;
 use MediaWiki\Revision\RevisionRecord;
-use RepoGroup;
 
 class RepoFile implements IAttachmentProvider {
 

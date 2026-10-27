@@ -4,6 +4,7 @@ namespace MediaWiki\Extension\WikiRAG\DataProvider;
 
 use MediaWiki\Extension\WikiRAG\ResourceIdGenerator;
 use MediaWiki\Extension\WikiRAG\Util\IndexabilityChecker;
+use MediaWiki\FileRepo\RepoGroup;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Linker\LinkTarget;
 use MediaWiki\Page\PageProps;
@@ -17,7 +18,6 @@ use MediaWiki\SpecialPage\SpecialPageFactory;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
 use MediaWiki\WikiMap\WikiMap;
-use RepoGroup;
 
 class Metadata extends HtmlContent {
 
